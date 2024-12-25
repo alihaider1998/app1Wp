@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const path = window.location.pathname;
+      const searchParams = window.location.search;
+      localStorage.setItem("redirect", path + searchParams);
+      window.location.replace("/mainappwp");
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

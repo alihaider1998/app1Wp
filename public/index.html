@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>App 1 Wp</title>
+    <script>
+      (function () {
+        const redirect = localStorage.getItem("redirect");
+        if (redirect) {
+          localStorage.removeItem("redirect");
+          if (redirect !== "/mainappwp/") {
+            history.replaceState(null, null, redirect);
+          }
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
