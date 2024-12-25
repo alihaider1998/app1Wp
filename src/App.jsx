@@ -3,7 +3,6 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import "./index.css";
 import "mainApp/styles";
-
 const SharedNotFound = lazy(() => import("mainApp/NotFound"));
 
 const App = ({ basePath = "" }) => {
