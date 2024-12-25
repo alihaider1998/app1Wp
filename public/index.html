@@ -10,7 +10,7 @@
         const redirect = localStorage.getItem("redirect");
         if (redirect) {
           localStorage.removeItem("redirect");
-          if (redirect !== "/mainappwp/") {
+          if (redirect !== "/") {
             history.replaceState(null, null, redirect);
           }
         }
