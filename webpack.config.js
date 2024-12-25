@@ -6,6 +6,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 module.exports = (env, argv) => {
   const isProduction = argv.mode === "production";
   const PORT = 3001;
+  const CopyWebpackPlugin = require('copy-webpack-plugin');
 
   return {
     mode: isProduction ? "production" : "development",
@@ -70,6 +71,9 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "public/404.html", to: "404.html" }],
       }),
     ],
     devServer: {
