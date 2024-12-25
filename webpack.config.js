@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
       filename: "[name].[contenthash].js",
       path: path.resolve(__dirname, "dist"),
       publicPath: isProduction
-        ? "https://alihaider1998.github.io/app1Wp/"
+        ? "/app1Wp/" // Must match your repo name
         : "http://localhost:3001/",
       clean: true,
     },
