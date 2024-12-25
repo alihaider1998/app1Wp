@@ -8,7 +8,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/app1' : '/'}>
+    <BrowserRouter
+      basename={process.env.NODE_ENV === "production" ? "/app1Wp" : "/"}
+    >
       <App />
     </BrowserRouter>
   </React.StrictMode>
